@@ -1,148 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="color-scheme" content="dark">
-  <meta name="theme-color" content="#0b1020">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F7F9FC">
   <title>Chris Quek | chrisquek.my</title>
+  <script>
+    try {
+      if (localStorage.getItem('cq-theme') === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    } catch (e) {}
+  </script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
-
-  <header class="site-header">
-    <div class="wrap header-row">
-      <a class="brand" href="#top">Chris Quek</a>
-      <div class="lang" role="group" aria-label="Language / Bahasa">
-        <button type="button" id="lang-en" data-lang="en" aria-pressed="true">EN</button>
-        <button type="button" id="lang-ms" data-lang="ms" aria-pressed="false">BM</button>
-      </div>
+  <!-- Icons: Feather (MIT licence), drawn inline so the page loads nothing from other sites -->
+  <div class="page">
+    <div class="top">
+      <button type="button" class="theme" id="theme" aria-label="Switch to dark mode">
+        <svg class="ico ico-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="ico ico-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
     </div>
-    <nav class="wrap nav" aria-label="Main">
-      <a href="#about" data-i18n="nav_about">About</a>
-      <a href="#skills" data-i18n="nav_skills">Skills</a>
-      <a href="#sites" data-i18n="nav_sites">Sites</a>
-      <a href="#contact" data-i18n="nav_contact">Contact</a>
-    </nav>
-  </header>
 
-  <main id="main">
-    <section class="hero" id="top">
-      <div class="wrap hero-grid">
-        <img class="photo" src="chris-quek.jpg" width="382" height="512"
-             alt="Illustrated portrait of Chris Quek" data-i18n-alt="photo_alt">
-        <div class="hero-text">
-          <h1>Chris Quek</h1>
-          <p class="role" data-i18n="hero_role">IT Infrastructure &amp; Systems Specialist</p>
-          <p class="lead" data-i18n="hero_lead">Open to project work and long-term roles, remote or on-site.</p>
-        </div>
+    <main id="main">
+      <div class="portrait">
+        <span class="wash wash-a"></span>
+        <span class="wash wash-b"></span>
+        <img src="chris-quek.jpg" width="382" height="512" alt="Illustrated portrait of Chris Quek">
       </div>
-    </section>
 
-    <section id="about">
-      <div class="wrap prose">
-        <h2 data-i18n="about_h">About</h2>
-        <p data-i18n="about_p1">I am an IT infrastructure specialist with more than 20 years across Malaysia and Singapore, from enterprise server and network support to monitoring and incident management. Today I am turning that experience into free, practical web tools for Malaysian businesses and freelancers, starting with MyBizTools.</p>
-        <p data-i18n="about_p2">Alongside infrastructure work, I also spent several years in retail operations and customer service supervision. That gave me a practical view of how IT systems need to perform on the shop floor.</p>
-      </div>
-    </section>
+      <h1>Chris Quek</h1>
+      <p class="role">IT infrastructure and systems specialist</p>
+      <p class="intro">More than 20 years keeping enterprise systems monitored and running, now building free, practical web tools for Malaysian businesses. Open to project work and long-term roles, remote or on-site.</p>
+      <p class="mail"><a href="mailto:hello@chrisquek.my">hello@chrisquek.my</a></p>
 
-    <section id="skills">
-      <div class="wrap">
-        <h2 data-i18n="skills_h">Skills &amp; Experience</h2>
+      <ul class="icons">
+        <li>
+          <div class="it soon" role="group" aria-label="CV, coming soon">
+            <span class="tile"><span class="w"></span><span class="i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span></span>
+            <span class="lbl">CV</span><span class="tag">Soon</span>
+          </div>
+        </li>
+        <li>
+          <a class="it" href="https://www.linkedin.com/in/chrisquek8088" target="_blank" rel="noopener noreferrer">
+            <span class="tile alt"><span class="w"></span><span class="i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span></span>
+            <span class="lbl">LinkedIn</span><span class="tag gap"></span>
+          </a>
+        </li>
+        <li>
+          <a class="it" href="mailto:hello@chrisquek.my">
+            <span class="tile"><span class="w"></span><span class="i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span></span>
+            <span class="lbl">Contact</span><span class="tag gap"></span>
+          </a>
+        </li>
+        <li>
+          <div class="it soon" role="group" aria-label="Blog, coming soon">
+            <span class="tile alt"><span class="w"></span><span class="i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span></span>
+            <span class="lbl">Blog</span><span class="tag">Soon</span>
+          </div>
+        </li>
+        <li>
+          <div class="it soon" role="group" aria-label="MyBizTools, coming soon">
+            <span class="tile"><span class="w"></span><span class="i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span></span>
+            <span class="lbl">MyBizTools</span><span class="tag">Soon</span>
+          </div>
+        </li>
+        <li>
+          <a class="it" href="https://github.com/chrisqck1411" target="_blank" rel="noopener noreferrer">
+            <span class="tile alt"><span class="w"></span><span class="i"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span></span>
+            <span class="lbl">GitHub</span><span class="tag gap"></span>
+          </a>
+        </li>
+      </ul>
+    </main>
 
-        <div class="grid">
-          <article class="card">
-            <h3 data-i18n="sk1_t">Monitoring &amp; observability</h3>
-            <p data-i18n="sk1_d">Zabbix, Nagios XI, Dynatrace, Checkmk, AS/400 monitoring</p>
-          </article>
-          <article class="card">
-            <h3 data-i18n="sk2_t">Systems &amp; infrastructure</h3>
-            <p data-i18n="sk2_d">Windows (Wintel), RHEL, Solaris, AIX, Active Directory, DHCP, file and print services, multi-site support</p>
-          </article>
-          <article class="card">
-            <h3 data-i18n="sk3_t">ITSM &amp; ITIL</h3>
-            <p data-i18n="sk3_d">Incident, problem and change management; root cause analysis reporting</p>
-          </article>
-          <article class="card">
-            <h3 data-i18n="sk4_t">Automation &amp; scripting</h3>
-            <p data-i18n="sk4_d">PowerShell; server patching automation</p>
-          </article>
-          <article class="card">
-            <h3 data-i18n="sk5_t">Security &amp; compliance</h3>
-            <p data-i18n="sk5_d">SOX-related auditing and remediation</p>
-          </article>
-          <article class="card">
-            <h3 data-i18n="sk6_t">Leadership &amp; operations</h3>
-            <p data-i18n="sk6_d">Supervised teams of 5 to 8; retail store operations and customer service supervision</p>
-          </article>
-        </div>
-
-        <h3 class="sub" data-i18n="exp_h">Experience highlights</h3>
-        <ul class="exp">
-          <li>
-            <p class="exp-head"><strong>Hong Leong Bank Berhad</strong> <span class="meta">Petaling Jaya &middot; Jul 2022 &ndash; Apr 2026</span></p>
-            <p class="exp-role" data-i18n="exp1_r">SR Executive, GOT-IT (ITSM)</p>
-            <p data-i18n="exp1_d">Led the migration of AS/400 and Oracle DB monitoring from Nagios XI to Zabbix, and built the AS/400 monitoring foundation as sole owner.</p>
-          </li>
-          <li>
-            <p class="exp-head"><strong>Mac City (M) Sdn Bhd</strong> <span class="meta">Melaka &amp; Kuala Lumpur &middot; Feb 2014 &ndash; Jun 2022</span></p>
-            <p class="exp-role" data-i18n="exp2_r">Apple Certified Technician, then Customer Service Supervisor</p>
-            <p data-i18n="exp2_d">Progressed from iOS and Mac technician to supervising customer service operations at service centres in Melaka and Kuala Lumpur.</p>
-          </li>
-          <li>
-            <p class="exp-head"><strong>HP</strong> <span class="meta">Kuala Lumpur &amp; Singapore &middot; <span data-i18n="exp3_date">Mar 2003 &ndash; Mar 2010</span></span></p>
-            <p class="exp-role" data-i18n="exp3_r">Wintel Level 3 support, incident management and service desk</p>
-            <p data-i18n="exp3_d">Standardised APJ server patching through automation, cutting required manpower by 71%. Coordinated cross-team incident escalations and root cause reports.</p>
-          </li>
-        </ul>
-        <p class="earlier" data-i18n="exp_more">Earlier roles included system engineer at CSC Malaysia, store supervisor at Challenger Technologies, and IT support in Singapore.</p>
-      </div>
-    </section>
-
-    <section id="sites">
-      <div class="wrap">
-        <h2 data-i18n="sites_h">My Sites</h2>
-        <div class="grid">
-          <article class="card">
-            <h3>MyBizTools</h3>
-            <p data-i18n="site1_d">Free business and document tools for Malaysian SMEs and freelancers.</p>
-            <span class="badge" data-i18n="soon">Coming soon</span>
-          </article>
-          <article class="card">
-            <h3 data-i18n="site2_t">Blog</h3>
-            <p data-i18n="site2_d">Posts and write-ups.</p>
-            <span class="badge" data-i18n="soon">Coming soon</span>
-          </article>
-          <article class="card">
-            <h3 data-i18n="site3_t">Resume</h3>
-            <p data-i18n="site3_d">My full resume.</p>
-            <span class="badge" data-i18n="soon">Coming soon</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="wrap">
-        <h2 data-i18n="contact_h">Contact</h2>
-        <p data-i18n="contact_p">Reach me by email or through my profiles below. A contact form is coming soon.</p>
-        <ul class="links">
-          <li><span data-i18n="email_l">Email</span>: <a href="mailto:hello@chrisquek.my">hello@chrisquek.my</a></li>
-          <li>GitHub: <a href="https://github.com/chrisqck1411" target="_blank" rel="noopener noreferrer">github.com/chrisqck1411</a></li>
-          <li>LinkedIn: <a href="https://www.linkedin.com/in/chrisquek8088" target="_blank" rel="noopener noreferrer">linkedin.com/in/chrisquek8088</a></li>
-        </ul>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap">
+    <footer class="foot">
       <p>&copy; 2026 Chris Quek</p>
-    </div>
-  </footer>
+    </footer>
+  </div>
 
   <script src="script.js" defer></script>
 </body>
