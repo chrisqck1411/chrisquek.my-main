@@ -1,53 +1,63 @@
 # chrisquek.my-main
 
-Main hub page for **chrisquek.my**. It links to all of Chris Quek's sites and projects.
+The main hub page for **chrisquek.my**: a one-page personal portfolio with a short introduction, contact details, and icon links to my other sites.
 
-## Status
+Live at https://chrisquek.my
 
-Initial setup. A placeholder page is deployed on staging. The real hub page has not been built yet. The hub design is not decided.
+## Files
 
-## Sites in the chrisquek.my family
+| File | Purpose |
+|------|---------|
+| `index.html` | The page |
+| `styles.css` | Styles, light and dark themes |
+| `script.js` | Theme toggle and contact form |
+| `404.html` | Not-found page |
+| `robots.txt`, `sitemap.xml` | Search engine files |
+| `chris-quek.jpg` | Portrait |
+| `og-image.jpg` | Preview image for shared links |
+| `favicon.svg` | Browser tab icon |
 
-Each site has its own GitHub repo and its own Cloudflare Pages project. Subdomain names are provisional until they are connected.
-
-| Site | Address | GitHub repo |
-|------|---------|-------------|
-| Main hub (this repo) | chrisquek.my | chrisqck1411/chrisquek.my-main |
-| MyBizTools | mybiztools.chrisquek.my (planned) | currently mybiztoolsmy/mybiztools-web, to be moved to chrisqck1411/chrisquek.my-mybiztools |
-| Blog | blog.chrisquek.my (planned) | chrisquek.my-blog (not created yet) |
-| Resume | resume.chrisquek.my (planned) | chrisquek.my-resume (not created yet) |
-
-## Repo naming convention
-
-`chrisquek.my-<subdomain_name>`, for example `chrisquek.my-main`, `chrisquek.my-mybiztools`, `chrisquek.my-blog`.
-
-## Hosting and cost
-
-- Domain: chrisquek.my, registered at Exabytes. DNS is managed at Cloudflare.
-- Hosting: Cloudflare Pages free tier. Pages project name: `chrisquek-my-main`.
-- Source code: GitHub, one repo per site.
-- Running cost: the domain renewal only.
+Plain HTML, CSS and JavaScript. No build step, no framework, nothing loaded from other sites except the contact form request.
 
 ## Branches and release workflow
 
-- `staging`: every change goes here first and is checked online on the staging URL.
-- `main`: production. It is only updated after staging has been confirmed stable.
+- `staging`: every change goes here first and is checked online.
+- `main`: production. Only updated after staging is confirmed stable, through a pull request from `staging`.
 
 | Environment | Branch | URL |
 |-------------|--------|-----|
 | Staging | staging | https://staging.chrisquek-my-main.pages.dev |
-| Production | main | https://chrisquek-my-main.pages.dev, then chrisquek.my once connected |
+| Production | main | https://chrisquek.my |
 
 Rollback: use Cloudflare Pages deployment rollback, or push a Git revert to `staging` first.
 
-## Languages
+There is no local preview. Commit to `staging`, wait for Cloudflare Pages to deploy, and test on the staging URL.
 
-Site text is in English and Bahasa Malaysia, with a language toggle.
+## Common edits
 
-## Editing
+- **Intro text:** edit the paragraph with class `intro` in `index.html`.
+- **Make an icon live:** in `index.html`, change the `div` for CV, Blog or MyBizTools into an `a` link with the site address, copying the pattern used for GitHub, and remove its "Soon" tag.
+- **Colours:** edit the variables at the top of `styles.css`.
 
-There is no local preview step. Commit to `staging`, wait for Cloudflare Pages to deploy, and test on the staging URL.
+## Hosting and services
 
-## Privacy
+- Domain: chrisquek.my, registered at Exabytes, auto-renew on. DNS is managed at Cloudflare.
+- Hosting: Cloudflare Pages free tier. Pages project: `chrisquek-my-main`.
+- Email: `hello@chrisquek.my` forwards to a personal inbox through Cloudflare Email Routing. It is receive-only. A DMARC record rejects mail that falsely claims to come from the domain.
+- Contact form: Web3Forms free plan (250 messages a month, stored for 30 days). The form access key is public by design. Spam protection is a hidden trap field plus Web3Forms' own check.
 
-This hub page does not collect or store visitor data.
+## Related sites
+
+Each site has its own repo, named `chrisquek.my-<subdomain>`, and its own Cloudflare Pages project.
+
+| Site | Address | Status |
+|------|---------|--------|
+| Hub (this repo) | chrisquek.my | Live |
+| MyBizTools | mybiztools.chrisquek.my (planned) | In development |
+| Blog | blog.chrisquek.my (planned) | Planned |
+| Resume | resume.chrisquek.my (planned) | Planned |
+
+## Notes
+
+- Every file in the repo root is public on the live site. Never commit secrets here.
+- Cloudflare Pages free tier allows 500 builds a month across the account. Each commit uses one.
