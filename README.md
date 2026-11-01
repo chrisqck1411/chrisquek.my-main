@@ -4,7 +4,7 @@ Main hub page for **chrisquek.my**. It links to all of Chris Quek's sites and pr
 
 ## Status
 
-Initial setup. The first version of the hub page has not been added yet. The hub design is not decided.
+Initial setup. A placeholder page is deployed on staging. The real hub page has not been built yet. The hub design is not decided.
 
 ## Sites in the chrisquek.my family
 
@@ -24,7 +24,7 @@ Each site has its own GitHub repo and its own Cloudflare Pages project. Subdomai
 ## Hosting and cost
 
 - Domain: chrisquek.my, registered at Exabytes. DNS is managed at Cloudflare.
-- Hosting: Cloudflare Pages free tier. One Pages project per site.
+- Hosting: Cloudflare Pages free tier. Pages project name: `chrisquek-my-main`.
 - Source code: GitHub, one repo per site.
 - Running cost: the domain renewal only.
 
@@ -35,8 +35,8 @@ Each site has its own GitHub repo and its own Cloudflare Pages project. Subdomai
 
 | Environment | Branch | URL |
 |-------------|--------|-----|
-| Staging | staging | to be confirmed after the Pages project is created |
-| Production | main | <project>.pages.dev, then chrisquek.my once connected |
+| Staging | staging | https://staging.chrisquek-my-main.pages.dev |
+| Production | main | https://chrisquek-my-main.pages.dev, then chrisquek.my once connected |
 
 Rollback: use Cloudflare Pages deployment rollback, or push a Git revert to `staging` first.
 
