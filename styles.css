@@ -159,14 +159,44 @@ h2 {
   font-size: 1.5rem;
   line-height: 1.25;
 }
-.placeholder {
-  margin: 0;
-  padding: 1rem 1.1rem;
-  background: var(--surface);
-  border: 1px dashed var(--border);
-  border-radius: var(--radius);
-  color: var(--muted);
+.prose p { margin: 0 0 1rem; max-width: 42rem; color: var(--text); }
+.prose p:last-child { margin-bottom: 0; }
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
 }
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.2rem;
+}
+.card h3 { margin: 0 0 0.4rem; font-size: 1.05rem; line-height: 1.3; }
+.card p { margin: 0; color: var(--muted); font-size: 0.97rem; }
+.badge {
+  display: inline-block;
+  margin-top: 0.8rem;
+  padding: 0.15rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.sub { margin: 2.25rem 0 0.9rem; font-size: 1.2rem; }
+.exp { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.25rem; }
+.exp li { padding-left: 1rem; border-left: 3px solid var(--accent); }
+.exp p { margin: 0 0 0.25rem; }
+.exp-head { font-size: 1.02rem; }
+.meta { color: var(--muted); font-size: 0.9rem; display: block; }
+.exp-role { color: var(--accent); font-weight: 600; font-size: 0.95rem; }
+.earlier { margin: 1.25rem 0 0; color: var(--muted); font-size: 0.95rem; }
+
+.links { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; gap: 0.5rem; }
+.links a { word-break: break-word; }
 
 /* Footer */
 .site-footer {
@@ -190,4 +220,6 @@ h2 {
   .hero h1 { font-size: 3rem; }
   .lead { margin: 0; }
   section { padding: 3rem 0; }
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .meta { display: inline; margin-left: 0.5rem; }
 }
