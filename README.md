@@ -1,6 +1,6 @@
 # chrisquek.my-main
 
-The main hub page for **chrisquek.my**: a one-page personal portfolio with a short introduction, contact details, and icon links to my other sites.
+The main hub page for **chrisquek.my**: a one-page personal portfolio with a short introduction, contact details, icon links (CV, LinkedIn, GitHub, Blog, Contact), and a "My projects" section linking to the sites I build.
 
 Live at https://chrisquek.my
 
@@ -36,7 +36,8 @@ There is no local preview. Commit to `staging`, wait for Cloudflare Pages to dep
 ## Common edits
 
 - **Intro text:** edit the paragraph with class `intro` in `index.html`.
-- **Make an icon live:** in `index.html`, change the `div` for CV, Blog or MyBizTools into an `a` link with the site address, copying the pattern used for GitHub, and remove its "Soon" tag.
+- **Make an icon live:** in `index.html`, change the `div` for CV or Blog into an `a` link with the site address, copying the pattern used for GitHub, and remove its "Soon" tag.
+- **Add a project:** in the "My projects" section of `index.html`, copy the MyBizTools `<li>` block, then change the link, icon and label. Alternate the tile colour: `tile` (peach), then `tile alt` (blue). Icons wrap three per row and stay centred.
 - **Colours:** edit the variables at the top of `styles.css`.
 
 ## Hosting and services
@@ -53,7 +54,7 @@ Each site has its own repo, named `chrisquek.my-<subdomain>`, and its own Cloudf
 | Site | Address | Status |
 |------|---------|--------|
 | Hub (this repo) | chrisquek.my | Live |
-| MyBizTools | mybiztools.chrisquek.my (planned) | In development |
+| MyBizTools | mybiztools.chrisquek.my | Live |
 | Blog | blog.chrisquek.my (planned) | Planned |
 | Resume | resume.chrisquek.my (planned) | Planned |
 
