@@ -137,14 +137,22 @@ h1 {
 .mail a { text-underline-offset: 3px; }
 
 /* Icon links */
+/* Three per row; a shorter last row is centred */
 .icons {
   list-style: none;
   margin: 0 auto;
   padding: 0;
   max-width: 22rem;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.5rem 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 1.5rem;
+}
+.icons > li {
+  flex: 0 0 33.333%;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
 }
 .it {
   display: flex;
@@ -272,6 +280,21 @@ a.it:hover .tile, button.it:hover .tile { transform: translateY(-3px); }
 .btn.ghost { background: transparent; color: var(--ink); border-color: var(--bd); }
 .btn:disabled { cursor: default; background: var(--mut); border-color: var(--mut); }
 .note { margin: 1rem 0 0; color: var(--mut); font-size: 0.82rem; line-height: 1.5; }
+
+/* My projects */
+.projects {
+  margin: 2.25rem auto 0;
+  max-width: 24rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--bd);
+}
+.projects h2 {
+  margin: 0 0 1.25rem;
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
 
 /* Footer */
 .foot { margin-top: 2.5rem; color: var(--mut); font-size: 0.85rem; }
