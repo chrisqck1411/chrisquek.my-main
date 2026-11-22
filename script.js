@@ -12,7 +12,7 @@
 
   function paint(theme) {
     root.setAttribute('data-theme', theme);
-    if (meta) meta.setAttribute('content', theme === 'dark' ? '#0F1A2E' : '#FBFCFE');
+    if (meta) meta.setAttribute('content', theme === 'dark' ? '#0A1626' : '#FFFFFF');
     if (btn) {
       btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
     }
