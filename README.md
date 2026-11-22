@@ -29,6 +29,7 @@ Plain HTML, CSS and JavaScript. No build step, no framework, nothing loaded from
 
 - Do not add inline `<script>` blocks, inline `style="..."` attributes or event attributes such as `onclick`. Put code in a `.js` file and styles in `styles.css`.
 - Anything loaded from another site (analytics, a font service, an embed) must first be added to the policy in `_headers`, or the browser will block it.
+- The two `X-Robots-Tag: noindex` rules at the bottom keep search engines off the `pages.dev` addresses, so only chrisquek.my is indexed. Staging therefore scores about 69 for SEO in PageSpeed; that is expected.
 - After changing `_headers`, test the contact form and the theme toggle on staging, and run the staging address through securityheaders.com.
 
 ## Design
