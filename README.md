@@ -11,7 +11,9 @@ Live at https://chrisquek.my
 | `index.html` | The page |
 | `styles.css` | Styles, with light and dark colour tokens at the top |
 | `script.js` | Theme toggle and contact form |
-| `404.html` | Not-found page |
+| `theme-init.js` | Applies a saved dark theme before the page paints |
+| `404.html`, `404.js` | Not-found page and its random messages |
+| `_headers` | Security headers set by Cloudflare Pages (not served as a file) |
 | `robots.txt`, `sitemap.xml` | Search engine files |
 | `chris-quek.jpg` | Illustrated portrait |
 | `og-image.jpg` | 1200 x 630 preview image for shared links |
@@ -20,6 +22,14 @@ Live at https://chrisquek.my
 | `LICENSE-inter.txt`, `LICENSE-jetbrains-mono.txt`, `LICENSE-bootstrap-icons.txt` | Licences for the fonts and icons |
 
 Plain HTML, CSS and JavaScript. No build step, no framework, nothing loaded from other sites except the contact form request.
+
+## Security headers
+
+`_headers` sets a Content-Security-Policy and other headers on every page. The policy only allows scripts, styles, fonts and images from this site, and only lets the contact form talk to `api.web3forms.com`. Because of that:
+
+- Do not add inline `<script>` blocks, inline `style="..."` attributes or event attributes such as `onclick`. Put code in a `.js` file and styles in `styles.css`.
+- Anything loaded from another site (analytics, a font service, an embed) must first be added to the policy in `_headers`, or the browser will block it.
+- After changing `_headers`, test the contact form and the theme toggle on staging, and run the staging address through securityheaders.com.
 
 ## Design
 
