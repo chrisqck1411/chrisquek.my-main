@@ -32,6 +32,10 @@ Plain HTML, CSS and JavaScript. No build step, no framework, nothing loaded from
 - The two `X-Robots-Tag: noindex` rules at the bottom keep search engines off the `pages.dev` addresses, so only chrisquek.my is indexed. Staging therefore scores about 69 for SEO in PageSpeed; that is expected.
 - After changing `_headers`, test the contact form and the theme toggle on staging, and run the staging address through securityheaders.com.
 
+## Cache busting
+
+Browsers and Cloudflare can keep `styles.css`, `script.js`, `theme-init.js` and `404.js` for hours. Their links in `index.html` and `404.html` therefore end in `?v=...` (now `v=20261122a`). **Whenever you change any of those four files, change the `v` value in both HTML files** (for example to the new date), or returning visitors can see new content with old styling.
+
 ## Design
 
 - Theme: "Modern Tech". A dot-grid banner, thin borders, Inter for text and JetBrains Mono for labels. Light and dark modes; the choice is remembered in the browser.
