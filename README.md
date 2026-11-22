@@ -1,6 +1,6 @@
 # chrisquek.my-main
 
-The main hub page for **chrisquek.my**: a one-page personal portfolio with a short introduction, contact details, icon links (CV, LinkedIn, GitHub, Blog, Contact), and a "My projects" section linking to the sites I build.
+The main hub page for **chrisquek.my**: a one-page personal site with a short introduction, a "Find me online" row of links (LinkedIn, Blog, GitHub, Contact) and a "What I'm building" section showing what I build and what each project is built and hosted with.
 
 Live at https://chrisquek.my
 
@@ -9,15 +9,34 @@ Live at https://chrisquek.my
 | File | Purpose |
 |------|---------|
 | `index.html` | The page |
-| `styles.css` | Styles, light and dark themes |
+| `styles.css` | Styles, with light and dark colour tokens at the top |
 | `script.js` | Theme toggle and contact form |
-| `404.html` | Not-found page |
+| `theme-init.js` | Applies a saved dark theme before the page paints |
+| `404.html`, `404.js` | Not-found page and its random messages |
+| `_headers` | Security headers set by Cloudflare Pages (not served as a file) |
 | `robots.txt`, `sitemap.xml` | Search engine files |
-| `chris-quek.jpg` | Portrait |
-| `og-image.jpg` | Preview image for shared links |
+| `chris-quek.jpg` | Illustrated portrait |
+| `og-image.jpg` | 1200 x 630 preview image for shared links |
 | `favicon.svg` | Browser tab icon |
+| `inter-latin-wght-normal.woff2`, `jetbrains-mono-latin-wght-normal.woff2` | Self-hosted fonts |
+| `LICENSE-inter.txt`, `LICENSE-jetbrains-mono.txt`, `LICENSE-bootstrap-icons.txt` | Licences for the fonts and icons |
 
 Plain HTML, CSS and JavaScript. No build step, no framework, nothing loaded from other sites except the contact form request.
+
+## Security headers
+
+`_headers` sets a Content-Security-Policy and other headers on every page. The policy only allows scripts, styles, fonts and images from this site, and only lets the contact form talk to `api.web3forms.com`. Because of that:
+
+- Do not add inline `<script>` blocks, inline `style="..."` attributes or event attributes such as `onclick`. Put code in a `.js` file and styles in `styles.css`.
+- Anything loaded from another site (analytics, a font service, an embed) must first be added to the policy in `_headers`, or the browser will block it.
+- The two `X-Robots-Tag: noindex` rules at the bottom keep search engines off the `pages.dev` addresses, so only chrisquek.my is indexed. Staging therefore scores about 69 for SEO in PageSpeed; that is expected.
+- After changing `_headers`, test the contact form and the theme toggle on staging, and run the staging address through securityheaders.com.
+
+## Design
+
+- Theme: "Modern Tech". A dot-grid banner, thin borders, Inter for text and JetBrains Mono for labels. Light and dark modes; the choice is remembered in the browser.
+- Icons: Bootstrap Icons (MIT) for the four links, Feather (MIT) for the rest. All are drawn inline in `index.html`.
+- Fonts: Inter and JetBrains Mono (SIL Open Font Licence 1.1), served from this repo.
 
 ## Branches and release workflow
 
@@ -36,9 +55,11 @@ There is no local preview. Commit to `staging`, wait for Cloudflare Pages to dep
 ## Common edits
 
 - **Intro text:** edit the paragraph with class `intro` in `index.html`.
-- **Make an icon live:** in `index.html`, change the `div` for CV or Blog into an `a` link with the site address, copying the pattern used for GitHub, and remove its "Soon" tag.
-- **Add a project:** in the "My projects" section of `index.html`, copy the MyBizTools `<li>` block, then change the link, icon and label. Alternate the tile colour: `tile` (peach), then `tile alt` (blue). Icons wrap three per row and stay centred.
+- **Make the Blog link live:** in the "Find me online" list, replace the `div` with class `link soon` by an `a` with class `link`, copying the pattern used for GitHub, and remove the "soon" tag.
+- **Bring back the CV link:** the CV link is kept as an HTML comment inside the same list. Move it out of the comment.
+- **Add a project:** in the "What I'm building" section, copy a `<li class="card">` block, then change the link, icon, name, status tag, description and the `built_with` and `runs_on` chips. Put the most important project first.
 - **Colours:** edit the variables at the top of `styles.css`.
+- **Share image:** replace `og-image.jpg` with a new 1200 x 630 image.
 
 ## Hosting and services
 
@@ -54,9 +75,10 @@ Each site has its own repo, named `chrisquek.my-<subdomain>`, and its own Cloudf
 | Site | Address | Status |
 |------|---------|--------|
 | Hub (this repo) | chrisquek.my | Live |
-| MyBizTools | mybiztools.chrisquek.my | Live |
+| MyBizTools | mybiztools.chrisquek.my | Live, work in progress |
+| GuanoAirTer | guanoairter.chrisquek.my | Live, beta |
 | Blog | blog.chrisquek.my (planned) | Planned |
-| Resume | resume.chrisquek.my (planned) | Planned |
+| Resume | resume.chrisquek.my | Live, not linked from the hub |
 
 ## Notes
 
