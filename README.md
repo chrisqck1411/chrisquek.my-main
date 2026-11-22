@@ -1,6 +1,6 @@
 # chrisquek.my-main
 
-The main hub page for **chrisquek.my**: a one-page personal site with a short introduction, a "Get to know me" row of links (LinkedIn, Blog, GitHub, Contact) and a "My Projects" section showing what I build and what each project is built and hosted with.
+The main hub page for **chrisquek.my**: a one-page personal site with a short introduction, a "Find me online" row of links (LinkedIn, Blog, GitHub, Contact) and a "What I'm building" section showing what I build and what each project is built and hosted with.
 
 Live at https://chrisquek.my
 
@@ -44,9 +44,9 @@ There is no local preview. Commit to `staging`, wait for Cloudflare Pages to dep
 ## Common edits
 
 - **Intro text:** edit the paragraph with class `intro` in `index.html`.
-- **Make the Blog link live:** in the "Get to know me" list, replace the `div` with class `link soon` by an `a` with class `link`, copying the pattern used for GitHub, and remove the "soon" tag.
+- **Make the Blog link live:** in the "Find me online" list, replace the `div` with class `link soon` by an `a` with class `link`, copying the pattern used for GitHub, and remove the "soon" tag.
 - **Bring back the CV link:** the CV link is kept as an HTML comment inside the same list. Move it out of the comment.
-- **Add a project:** in the "My Projects" section, copy a `<li class="card">` block, then change the link, icon, name, status tag, description and the `built_with` and `runs_on` chips. Put the most important project first.
+- **Add a project:** in the "What I'm building" section, copy a `<li class="card">` block, then change the link, icon, name, status tag, description and the `built_with` and `runs_on` chips. Put the most important project first.
 - **Colours:** edit the variables at the top of `styles.css`.
 - **Share image:** replace `og-image.jpg` with a new 1200 x 630 image.
 
