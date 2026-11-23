@@ -18,6 +18,7 @@ Live at https://chrisquek.my
 | `chris-quek.jpg` | Illustrated portrait |
 | `og-image.jpg` | 1200 x 630 preview image for shared links |
 | `favicon.svg` | Browser tab icon |
+| `guanoairter-logo.svg` | GuanoAirTer logo for its project card (copied from the GuanoAirTer repo, file `cf/site/favicon.svg`) |
 | `myedustats-logo.svg` | MyEduStats logo for its project card (copied from the MyEduStats repo so the hub does not depend on that site) |
 | `inter-latin-wght-normal.woff2`, `jetbrains-mono-latin-wght-normal.woff2` | Self-hosted fonts |
 | `LICENSE-inter.txt`, `LICENSE-jetbrains-mono.txt`, `LICENSE-bootstrap-icons.txt` | Licences for the fonts and icons |
@@ -35,7 +36,7 @@ Plain HTML, CSS and JavaScript. No build step, no framework, nothing loaded from
 
 ## Cache busting
 
-Browsers and Cloudflare can keep `styles.css`, `script.js`, `theme-init.js` and `404.js` for hours. Their links in `index.html` and `404.html` therefore end in `?v=...` (now `v=20261123b`). **Whenever you change any of those four files, change the `v` value in both HTML files** (for example to the new date), or returning visitors can see new content with old styling.
+Browsers and Cloudflare can keep `styles.css`, `script.js`, `theme-init.js` and `404.js` for hours. Their links in `index.html` and `404.html` therefore end in `?v=...` (now `v=20261123c`). **Whenever you change any of those four files, change the `v` value in both HTML files** (for example to the new date), or returning visitors can see new content with old styling.
 
 ## Design
 
