@@ -35,7 +35,7 @@ Plain HTML, CSS and JavaScript. No build step, no framework, nothing loaded from
 
 ## Cache busting
 
-Browsers and Cloudflare can keep `styles.css`, `script.js`, `theme-init.js` and `404.js` for hours. Their links in `index.html` and `404.html` therefore end in `?v=...` (now `v=20261123a`). **Whenever you change any of those four files, change the `v` value in both HTML files** (for example to the new date), or returning visitors can see new content with old styling.
+Browsers and Cloudflare can keep `styles.css`, `script.js`, `theme-init.js` and `404.js` for hours. Their links in `index.html` and `404.html` therefore end in `?v=...` (now `v=20261123b`). **Whenever you change any of those four files, change the `v` value in both HTML files** (for example to the new date), or returning visitors can see new content with old styling.
 
 ## Design
 
