@@ -61,7 +61,7 @@ There is no local preview. Commit to `staging`, wait for Cloudflare Pages to dep
 ## Common edits
 
 - **Intro text:** edit the paragraph with class `intro` in `index.html`.
-- **Make the Blog link live:** in the "Find me online" list, replace the `div` with class `link soon` by an `a` with class `link`, copying the pattern used for GitHub, and remove the "soon" tag.
+- **Blog link:** live since 25 Nov 2026 (plain `a` tile pointing to https://blog.chrisquek.my/, the blog "The SIGSEGV Log"). The `.link.soon` and `.soon-tag` styles in `styles.css` are no longer used; they can serve a future "soon" tile.
 - **Bring back the CV link:** the CV link is kept as an HTML comment inside the same list. Move it out of the comment.
 - **Add a project:** in the "What I'm building" section, copy a `<li class="card">` block, then change the link, icon, name, status tag, description and the `built_with` and `runs_on` chips. Put the most important project first.
 - **Colours:** edit the variables at the top of `styles.css`.
@@ -83,7 +83,7 @@ Each site has its own repo, named `chrisquek.my-<subdomain>`, and its own Cloudf
 | Hub (this repo) | chrisquek.my | Live |
 | MyBizTools | mybiztools.chrisquek.my | Live, work in progress |
 | GuanoAirTer | guanoairter.chrisquek.my | Live, beta |
-| Blog | blog.chrisquek.my (planned) | Planned |
+| Blog ("The SIGSEGV Log") | blog.chrisquek.my | Live |
 | Resume | resume.chrisquek.my | Live, not linked from the hub |
 
 ## Notes
