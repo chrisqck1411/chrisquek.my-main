@@ -311,7 +311,6 @@ a.link:hover, button.link:hover { border-color: var(--accent); }
   margin-bottom: 0.65rem;
 }
 .ico-card { flex: 0 0 auto; width: 1.25rem; height: 1.25rem; color: var(--accent); }
-img.ico-card { display: block; width: 1.5rem; height: 1.5rem; }
 .card h3 { min-width: 0; overflow-wrap: anywhere; margin: 0; font-size: 1.1875rem; font-weight: 700; line-height: 1.25; }
 .badge {
   margin-left: auto;
