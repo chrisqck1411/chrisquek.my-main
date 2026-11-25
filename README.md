@@ -18,8 +18,6 @@ Live at https://chrisquek.my
 | `chris-quek.jpg` | Illustrated portrait |
 | `og-image.jpg` | 1200 x 630 preview image for shared links |
 | `favicon.svg` | Browser tab icon |
-| `guanoairter-logo.svg` | GuanoAirTer logo for its project card (copied from the GuanoAirTer repo, file `cf/site/favicon.svg`) |
-| `myedustats-logo.svg` | MyEduStats logo for its project card (copied from the MyEduStats repo so the hub does not depend on that site) |
 | `inter-latin-wght-normal.woff2`, `jetbrains-mono-latin-wght-normal.woff2` | Self-hosted fonts |
 | `LICENSE-inter.txt`, `LICENSE-jetbrains-mono.txt`, `LICENSE-bootstrap-icons.txt` | Licences for the fonts and icons |
 
@@ -36,7 +34,7 @@ Plain HTML, CSS and JavaScript. No build step, no framework, nothing loaded from
 
 ## Cache busting
 
-Browsers and Cloudflare can keep `styles.css`, `script.js`, `theme-init.js` and `404.js` for hours. Their links in `index.html` and `404.html` therefore end in `?v=...` (now `v=20261123c`). **Whenever you change any of those four files, change the `v` value in both HTML files** (for example to the new date), or returning visitors can see new content with old styling.
+Browsers and Cloudflare can keep `styles.css`, `script.js`, `theme-init.js` and `404.js` for hours. Their links in `index.html` and `404.html` therefore end in `?v=...` (now `v=20261125b`). **Whenever you change any of those four files, change the `v` value in both HTML files** (for example to the new date), or returning visitors can see new content with old styling.
 
 ## Design
 
@@ -61,8 +59,9 @@ There is no local preview. Commit to `staging`, wait for Cloudflare Pages to dep
 ## Common edits
 
 - **Intro text:** edit the paragraph with class `intro` in `index.html`.
-- **Make the Blog link live:** in the "Find me online" list, replace the `div` with class `link soon` by an `a` with class `link`, copying the pattern used for GitHub, and remove the "soon" tag.
+- **Blog link:** live since 25 Nov 2026 (plain `a` tile pointing to https://blog.chrisquek.my/, the blog "The SIGSEGV Log"). The `.link.soon` and `.soon-tag` styles in `styles.css` are no longer used; they can serve a future "soon" tile.
 - **Bring back the CV link:** the CV link is kept as an HTML comment inside the same list. Move it out of the comment.
+- **Teaser card:** the last card in "What I'm building" (class `teaser`) announces an unnamed project: no name, no link. When the project is announced, replace it with a normal card (copy one above) and delete the `.card.teaser`, `.term`, `.cursor` and `.veiled` rules from `styles.css`. Do not put the project's name anywhere (files, commits, comments) until it is announced.
 - **Add a project:** in the "What I'm building" section, copy a `<li class="card">` block, then change the link, icon, name, status tag, description and the `built_with` and `runs_on` chips. Put the most important project first.
 - **Colours:** edit the variables at the top of `styles.css`.
 - **Share image:** replace `og-image.jpg` with a new 1200 x 630 image.
@@ -83,7 +82,7 @@ Each site has its own repo, named `chrisquek.my-<subdomain>`, and its own Cloudf
 | Hub (this repo) | chrisquek.my | Live |
 | MyBizTools | mybiztools.chrisquek.my | Live, work in progress |
 | GuanoAirTer | guanoairter.chrisquek.my | Live, beta |
-| Blog | blog.chrisquek.my (planned) | Planned |
+| Blog ("The SIGSEGV Log") | blog.chrisquek.my | Live |
 | Resume | resume.chrisquek.my | Live, not linked from the hub |
 
 ## Notes
